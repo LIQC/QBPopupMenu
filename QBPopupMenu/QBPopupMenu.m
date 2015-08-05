@@ -746,7 +746,7 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
         {
             arrowRect = CGRectMake(point.x - arrowSize + 1.0,
                                    point.y - arrowSize,
-                                   arrowSize * 2.0 - 1.0,
+                                   arrowSize * 2.0 - 3.0,
                                    arrowSize);
             
             arrowRect.origin.x = MIN(MAX(arrowRect.origin.x, self.cornerRadius),
@@ -810,7 +810,7 @@ static const NSTimeInterval kQBPopupMenuAnimationDuration = 0.2;
     // Separator
     if (direction == QBPopupMenuArrowDirectionDown || direction == QBPopupMenuArrowDirectionUp) {
         for (QBPopupMenuItemView *itemView in self.visibleItemViews) {
-            [self drawSeparatorInRect:CGRectMake(itemView.frame.origin.x + itemView.frame.size.width - 1, rect.origin.y, 1, rect.size.height)];
+            [self drawSeparatorInRect:CGRectMake(itemView.frame.origin.x + itemView.frame.size.width - 1, rect.origin.y, 0, rect.size.height)];
         }
     }
 }
